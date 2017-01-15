@@ -1,6 +1,6 @@
 {
   "name": "gke-deploy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Build and pushes docker project to Google Container Registry (GCR) and deploys it on Google Container Engine (GKE)",
   "main": "src/index.js",
   "scripts": {
