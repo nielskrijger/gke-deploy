@@ -31,12 +31,18 @@ In your project, in the same directory as your Dockerfile add a `.gkedeploy` fil
 }
 ```
 
-Make sure to add the `.gkedeploy` to your `.gitignore`.
-
 These settings can be found in your gcloud console or in kubectl. Pay special attention to the `deployment_name`. A gcloud container deployment MUST exist prior to running `gke-deploy deploy`. Run `kubectl get deployments` to check your existing deployment names.
+
+Make sure to add `.gkedeploy` to your `.gitignore` if you want to keep your deployment configuration hidden.
 
 To build your docker image, push its image to GCR and deploy it run the following:
 
 ```
 $ gke-deploy push deploy
+```
+
+To list all commands and options run:
+
+```
+$ gke-deploy --help
 ```
