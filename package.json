@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "gkedeploy": "./src/index.js"
+    "gke-deploy": "./src/index.js"
   },
   "engines": {
     "node": ">=6"

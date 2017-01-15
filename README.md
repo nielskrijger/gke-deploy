@@ -15,6 +15,10 @@ This tool only updates the deployment image of an existing kubernetes deployment
 
 ## Setup
 
+```
+$ npm install -g gke-deploy
+```
+
 In your project, in the same directory as your Dockerfile add a `.gkedeploy` file with the following contents:
 
 ```json
@@ -27,4 +31,10 @@ In your project, in the same directory as your Dockerfile add a `.gkedeploy` fil
 }
 ```
 
-These settings can be found in your gcloud console or in kubectl. Pay special attention to the `deployment_name`. A gcloud container deployment MUST exist prior to running `gkedeploy deploy`. Run `kubectl get deployments` to check your existing deployment names.
+These settings can be found in your gcloud console or in kubectl. Pay special attention to the `deployment_name`. A gcloud container deployment MUST exist prior to running `gke-deploy deploy`. Run `kubectl get deployments` to check your existing deployment names.
+
+To build your docker image, push its image to GCR and deploy it run the following:
+
+```
+$ gke-deploy push deploy
+```
