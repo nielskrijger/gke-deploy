@@ -1,0 +1,30 @@
+{
+  "name": "gke-deploy",
+  "version": "1.0.0",
+  "description": "Build and pushes docker project to Google Container Registry (GCR) and deploys it on Google Container Engine (GKE)",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "gkedeploy": "./src/index.js"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nielskrijger/gke-deploy.git"
+  },
+  "author": "Niels Krijger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nielskrijger/gke-deploy/issues"
+  },
+  "homepage": "https://github.com/nielskrijger/gke-deploy#readme",
+  "dependencies": {
+    "bluebird": "^3.4.7",
+    "chalk": "^1.1.3",
+    "yargs": "^6.6.0"
+  }
+}
