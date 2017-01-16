@@ -1,23 +1,27 @@
 # gke-deploy
 
-Utility library to easily build and push docker project to Google Container Registry (GCR) and deploy it on Google Container Engine (GKE).
+This is a utility library to easily build and push docker projects to Google Container Registry (GCR) and deploy it on Google Container Engine (GKE).
 
-This library relies on the following applications to be installed and available in your CLI:
+This library relies on the following applications to be installed on your machine or CI:
 
+- `node`
+- `npm`
 - `git`
 - `docker`
 - `kubectl`
 - `gcloud`
 
-How to install and configure these application is out-of-scope for this document.
+How to install and configure these application is out-of-scope for this document. It is highly recommended to setup a working Google Container Engine cluster with at least one running deployment before using this tool.
 
-This tool only updates the deployment image of an existing kubernetes deployment, it will not create one. See Google docs how to do this.
+This tool only updates the deployment image of an existing kubernetes deployment, it will not create one.
 
-## Setup
+## Installation
 
 ```
 $ npm install -g gke-deploy
 ```
+
+## Setup
 
 In your project, in the same directory as your Dockerfile add a `.gkedeploy` file with the following contents:
 
@@ -33,8 +37,6 @@ In your project, in the same directory as your Dockerfile add a `.gkedeploy` fil
 
 These settings can be found in your gcloud console or in kubectl. Pay special attention to the `deployment_name`. A gcloud container deployment MUST exist prior to running `gke-deploy deploy`. Run `kubectl get deployments` to check your existing deployment names.
 
-Make sure to add `.gkedeploy` to your `.gitignore` if you want to keep your deployment configuration hidden.
-
 To build your docker image, push its image to GCR and deploy it run the following:
 
 ```
@@ -46,3 +48,7 @@ To list all commands and options run:
 ```
 $ gke-deploy --help
 ```
+
+# TODO
+
+- Login with Gcloud using keyconfig json file
