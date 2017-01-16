@@ -1,8 +1,8 @@
 # gke-deploy
 
-This is a utility library to easily build and push docker projects to Google Container Registry (GCR) and deploy it on Google Container Engine (GKE).
+This is a utility library to easily build and push docker projects to Google Container Registry (GCR) and deploy them on Google Container Engine (GKE).
 
-This library relies on the following applications to be installed on your machine or CI:
+This tool relies on the following applications to be installed on your machine or CI:
 
 - `node`
 - `npm`
@@ -13,7 +13,7 @@ This library relies on the following applications to be installed on your machin
 
 How to install and configure these application is out-of-scope for this document. It is highly recommended to setup a working Google Container Engine cluster with at least one running deployment before using this tool.
 
-This tool only updates the deployment image of an existing kubernetes deployment, it will not create one.
+This tool only updates the deployment image of an existing kubernetes deployment, it will not create one!
 
 ## Installation
 
